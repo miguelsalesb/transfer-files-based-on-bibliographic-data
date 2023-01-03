@@ -42,6 +42,8 @@ type Data struct {
 	Text     []string
 }
 
+const sourceFolder, destinationFolder = "C:\\Users\\mbaptista\\OneDrive - Biblioteca Nacional de Portugal\\Documentos\\go\\src\\transfer-files-based-on-bibliographic-data\\origem\\", "C:\\Users\\mbaptista\\OneDrive - Biblioteca Nacional de Portugal\\Documentos\\go\\src\\transfer-files-based-on-bibliographic-data\\destino\\"
+
 func main() {
 
 	fileRead, errOpen := os.Open("RNOFA.xml")
@@ -186,9 +188,6 @@ func removeDuplicate[T string | int](sliceList []T) []T {
 }
 
 func transfer_file(zip string) {
-
-	sourceFolder := "C:\\Users\\mbaptista\\OneDrive - Biblioteca Nacional de Portugal\\Documentos\\go\\src\\rnofa-porto\\origem\\"
-	destinationFolder := "C:\\Users\\mbaptista\\OneDrive - Biblioteca Nacional de Portugal\\Documentos\\go\\src\\rnofa-porto\\destino\\"
 
 	fmt.Println("Transfering file: ", zip)
 
